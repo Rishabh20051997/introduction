@@ -1,0 +1,39 @@
+$mainBlack:  #222;
+$mainGreen: #00FF00;
+$mainGrey : #CCC;
+
+.navbar {
+  background: $mainBlack;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: flex-end;
+}
+.nav-link {
+  color: $mainGrey;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-width: 1;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $mainGreen;
+  }
+  &:active {
+    color: $mainGreen;
+  }
+}
+.active {
+  color: $mainGreen;
+}
+
+// .nav-link li {
+
+// }
