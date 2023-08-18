@@ -1,35 +1,28 @@
+import { useCallback } from "react"
+import { NAV_LINKS_LIST } from "../../constant/constant"
 import { logo } from "../../resources"
-import './nav-bar-style.scss'
+import styles from './nav-bar-style.module.scss'
 
-const NAV_LINKS = [{
-    key: 'about',
-    displayValue: 'About me'
-}, {
-    key: 'skills',
-    displayValue: 'Skills'
-}, {
-    key: 'experience',
-    displayValue: 'Experience'
-}, {
-    key: 'project',
-    displayValue: 'Projects'
-}, {
-    key: 'education',
-    displayValue: 'Education Qualification'
-}, {
-    key: 'contact',
-    displayValue: 'Contact'
-}]
+
+
 const NavBarComponent = () => {
-    return <nav className="navbar">
+    const onNavBarClicked = useCallback((item: typeof NAV_LINKS_LIST[0]) => {
+        const anchor = document.querySelector('#' + item.scrollId)
+        anchor?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, [])
+
+    return <nav className={styles.navbar}>
         <img src={logo} height={60} width={60} alt="city tours logo" />
-        <div className="nav-links">
-            {NAV_LINKS.map(item => {
-                return <a href='/' className="nav-link">{item.displayValue}</a>
+        <div className={styles.navLinks}>
+            {NAV_LINKS_LIST.map(item => {
+                return <a
+                    onClick={() => onNavBarClicked(item)}
+                    className={styles.navLink}>
+                    {item.displayValue}
+                </a>
             })}
         </div>
     </nav>
-
 }
 
 export default NavBarComponent

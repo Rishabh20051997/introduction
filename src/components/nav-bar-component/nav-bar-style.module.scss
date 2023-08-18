@@ -1,39 +1,37 @@
-$mainBlack:  #222;
-$mainGreen: #00FF00;
-$mainGrey : #CCC;
+@import "../../sass/var";
+@import "../../sass/mixing";
 
 .navbar {
-  background: $mainBlack;
-  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $primary-color;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.nav-links {
+.navLinks {
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: flex-end;
+  align-items: center;
 }
-.nav-link {
-  color: $mainGrey;
+
+.navLink {
+  color: $on-primary-variant-color;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 1.2rem;
-  border-width: 1;
+  padding: 0px 10px;
   transition: all 0.3s linear;
+
   &:hover {
-    color: $mainGreen;
+    color: $on-primary-color;
   }
+
   &:active {
-    color: $mainGreen;
+    color: $on-primary-color;
   }
 }
-.active {
-  color: $mainGreen;
-}
-
-// .nav-link li {
-
-// }

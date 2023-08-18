@@ -1,0 +1,57 @@
+@import "../../sass/var";
+@import "../../sass/mixing";
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-variant-color;
+    padding: 4rem 2rem;
+}
+
+.sectionHeader {
+    @include sectionHeader;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.sectionSubHeader {
+    @include sectionSubHeader;
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.educationItemContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.qualificationText {
+    @include sectionSubHeader;
+    color: $on-primary-color;  
+}
+
+.streamText {
+    font-size: calc(14px + 1vmin);
+    color: $on-primary-variant-color;
+    font-weight: bold;
+}
+
+.marksInfo {
+    font-size: calc(10px + 0.8vmin);
+    color: $on-primary-variant-color;
+}
+
+.instituteDetails {
+    font-size: calc(10px + 1vmin);
+    color: $on-primary-variant-color;
+    font-weight: bold;
+}
+
+
+
+

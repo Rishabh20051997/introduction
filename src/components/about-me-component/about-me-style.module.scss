@@ -1,34 +1,54 @@
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
+@import "../../sass/var";
+@import "../../sass/mixing";
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $primary-color;
+  padding: 4rem 0rem 0rem 2rem;
+}
+
+.personalInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sectionHeader {
+  @include sectionHeader
+}
+
+.sectionSubHeader {
+  @include sectionSubHeader
+}
+
+.socialMediaContainer {
+  padding: 1rem 0rem;
+}
+
+.socialMediaIcons {
+  padding-right: 1rem;
+
+  &:hover {
     opacity: 0.7;
   }
-  
-  /* Set a specific color for each brand */
-  
-  .fa-whatsapp {
-    background: #25D366;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #55ACEE;
-    color: white;
-  }
+}
 
-  .fa-github {
-    background: #55ACEE;
-    color: white;
-  }
-  .fa-google {
-    background: #55ACEE;
-    color: white;
-  }
+.downloadCvButton {
+  padding: 0.4rem 1rem;
+  color: $primary-color;
+  font-size: calc(14px + 1.5vmin);
+  border-radius: 0.2rem;
+  background-color: white;
+}
+
+.profileImageContainer {
+  @include flexCentreAlign
+}
+
+.profilePicStyle {
+  width: 22vw;
+  height: 40vh;
+}

@@ -1,0 +1,15 @@
+@import "../../sass/var";
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-variant-color;
+    padding: 1rem;
+    align-items: flex-end;
+}
+
+.copyRightText {
+    font-size: calc(10px + 0.6vmin);
+    color: $on-primary-variant-color;
+}

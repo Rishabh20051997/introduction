@@ -1,0 +1,102 @@
+@import "../../sass/var";
+@import "../../sass/mixing";
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    padding: 4rem 2rem;
+}
+
+.sectionHeader {
+    @include sectionHeader;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+.experienceItemContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.rightContainer {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.cardContainer {
+    background-color: $primary-variant-color;
+    padding: 1rem;
+    border-width: 2px;
+    border-color: $on-primary-variant-color;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.sectionSubHeader {
+    @include sectionSubHeader;
+}
+
+.experienceText {
+    font-size: calc(6px + 0.5vmin);
+    color: $on-primary-color;  
+}
+
+.companyName {
+    @include sectionSubHeader;
+    color: $on-primary-color;  
+}
+
+.positionText {
+    font-size: calc(10px + 1vmin);
+    color: $on-primary-variant-color;
+    font-weight: bold;
+}
+
+.experienceDetails {
+    font-size: calc(6px + 0.5vmin);
+    color: $on-primary-variant-color;
+}
+
+.projectDetails {
+    font-size: calc(6px + 0.4vmin);
+    color: $on-primary-variant-color;
+    font-weight: bold;
+}
+
+.progressBarContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.progressBarCircle {
+    width: 20px;
+    height: 20px;
+    background-color: $on-primary-variant-color;
+    border-radius: 20px;
+
+}
+
+.progressLine {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: $on-primary-variant-color;
+}
+
+

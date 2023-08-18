@@ -1,0 +1,15 @@
+@mixin flexCentreAlign {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+@mixin sectionHeader {
+  font-size: calc(18px + 2vmin);
+  color: $on-primary-color;
+}
+
+@mixin sectionSubHeader {
+  font-size: calc(14px + 1.5vmin);
+  color: $on-primary-variant-color;  
+}

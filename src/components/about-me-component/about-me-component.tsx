@@ -1,21 +1,26 @@
-import {fa } from './about-me-style.module.scss'
-import { logo } from "../../resources"
+import style from './about-me-style.module.scss'
+import { profilePic } from "../../resources"
+import { WhatsAppIcon, LinkedInIcon, GithubIcon, GmailIcon } from '../../resources/icons/social-media-icons';
 
-const AboutMeComponent = () => {
-    return <section style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-        <div >
-        <header>Hi I am Rishabh Sharma</header>
-        <div>I am a Software Engineer with experience of 4 years in React Native</div>
-        <div>
-        <a href="#" className={''}></a>
-        <a href="#" className="fa fa-linkedin"></a>
-        <a href="#" className="fa fa-github"></a>
-        <a href="#" className="fa fa-google"></a>
+const AboutMeComponent = ({
+    sectionId = '',
+    index = 0
+}) => {
+    return <section id={sectionId} className={style.container}>
+        <div className={style.personalInfoContainer}>
+            <header className={style.sectionHeader}>Hi I am Rishabh Sharma</header>
+            <header className={style.sectionSubHeader}>I am a Software Engineer with experience of 4 years in React Native</header>
+            <div className={style.socialMediaContainer}>
+                <WhatsAppIcon className={style.socialMediaIcons} />
+                <LinkedInIcon className={style.socialMediaIcons} />
+                <GithubIcon className={style.socialMediaIcons} />
+                <GmailIcon className={style.socialMediaIcons} />
+            </div>
+            <button className={style.downloadCvButton}>Download CV</button>
         </div>
-        <button>Download CV</button>
+        <div className={style.profileImageContainer}>
+            <img src={profilePic} className={style.profilePicStyle} alt="My Image" />
         </div>
-
-        <img src={logo} height={200} width={200} alt="My Image" />
     </section>
 
 }

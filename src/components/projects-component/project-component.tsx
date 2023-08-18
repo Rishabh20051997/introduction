@@ -1,8 +1,11 @@
-import './project-component-style.scss'
+import styles from './project-component-style.module.scss'
 
-const ProjectComponent = () => {
+const ProjectComponent = ({
+    sectionId = '',
+    index = 0
+}) => {
 
-    return <section>
+    return <section  id={sectionId}>
         <header>
             My Tech Project
         </header>

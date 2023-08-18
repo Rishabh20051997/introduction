@@ -1,22 +1,28 @@
-import './contact-us-component-style.scss'
+import style from './contact-us-component-style.module.scss'
 
-const ContactUsComponent = () => {
+const ContactUsComponent = ({
+    sectionId = '',
+    index = 0
+}) => {
 
-    return <section>
-        <header>GET IN TOUCH</header>
-        <div>
-            My Contact Details
+    return <section  id={sectionId} className={style.container}>
+        <header className={style.sectionHeader}>Get In Touch</header>
 
-            EMAIL
+        <div className={style.innerContainer}>
+            <div className={style.infoContainer}>
+                <p className={style.labelText}>EMAIL</p>
+                <p className={style.infoText}>kaushikrishabh2005@gmail.com</p>
+            </div>
 
-            kaushikrishabh2005@gmail.com
+            <div className={style.infoContainer}>
+                <p className={style.labelText}>PHONE</p>
+                <p className={style.infoText}>+91 9711138285</p>
+            </div>
 
-            PHONE
-
-            +91 9711138285
-
-            ADDRESS
-            396/1, Bhim Garh Kheri, Gurgaon, India - 122001
+            <div className={style.infoContainer}>
+                <p className={style.labelText}>ADDRESS</p>
+                <p className={style.infoText}>396/1, Bhim Garh Kheri, Gurgaon, India - 122001</p>
+            </div>
         </div>
     </section>
 

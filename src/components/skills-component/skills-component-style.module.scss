@@ -1,0 +1,50 @@
+@import "../../sass/var";
+@import "../../sass/mixing";
+
+
+.container {
+  background-color: $primary-variant-color;
+  padding: 4rem 2rem;
+}
+
+.sectionHeader {
+  @include flexCentreAlign;
+  flex-direction: column;
+  @include sectionHeader;
+  text-transform:uppercase;
+}
+
+.listContainer {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.listItemContainer {
+    padding-top: 1rem;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sectionSubHeader {
+  font-size: calc(14px + 1vmin);
+  color: $on-primary-variant-color;
+  padding-left: 1rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.bulletListItem {
+    font-size: calc(10px + 1vmin);
+    color: $on-primary-variant-color;  
+    padding-left: 2rem;
+}
+
