@@ -7,7 +7,7 @@ const Text = ({
     text = '',
     fontType = FONT_TYPE.LABEL_MEDIUM,
     color = 'white',
-    textAlign,
+    textAlign ='left',
     className = '',
     children
 }: ITextProps) => {

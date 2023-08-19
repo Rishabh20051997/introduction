@@ -1,0 +1,60 @@
+@import "../../sass/var";
+@import "../../sass/mixing";
+
+.sideDrawer { 
+    height: 100%;
+    background: $primary-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    z-index: 200;
+    box-shadow: 1px 0px 7px rgba(0,0,0,0.5); 
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+ }
+
+ .sideDrawer.open {
+    transform: translateX(0);
+ }
+
+ .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    top: 0;
+    right: 0;
+  }
+
+  .navLinks {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: flex-end;
+   align-items: center;
+ }
+
+  .navLink {
+   color: $on-primary-variant-color;
+   text-transform: capitalize;
+   text-decoration: none;
+   font-size: 1.2rem;
+   padding: 0.5rem;
+   transition: all 0.3s linear;
+ 
+   &:hover {
+     color: $on-primary-color;
+   }
+ 
+   &:active {
+     color: $on-primary-color;
+   }
+ }
+ 
+ .logoImage {
+   width: 3rem;
+   height: 3rem;
+   padding-top: 2rem;
+ }

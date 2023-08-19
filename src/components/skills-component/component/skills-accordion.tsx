@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import style from 'components/skills-component/skills-component-style.module.scss'
+import style from '../skills-component-style.module.scss'
 
 const SkillsAccordionComponent = ({
     headerIcon,

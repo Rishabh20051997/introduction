@@ -1,5 +1,5 @@
 
-import { ReactIcon, JavascriptIcon, TypescriptIcon } from 'resources/icons/social-media-icons'
+import { ReactIcon, JavascriptIcon, TypescriptIcon } from 'resources/icons/language-icons'
 import SkillsAccordionComponent from './component/skills-accordion'
 import style from './skills-component-style.module.scss'
 
