@@ -1,11 +1,18 @@
 
 import { ReactIcon, JavascriptIcon, TypescriptIcon } from 'resources/icons/language-icons'
 import SkillsAccordionComponent from './component/skills-accordion'
+import Text from 'widgets/ui-text'
 import style from './skills-component-style.module.scss'
+import { FONT_TYPE, colors } from 'themes'
 
 const SkillsComponent = () => {
     return <>
-        <header className={style.sectionHeader}>My Skills & Expertise</header>
+        <Text
+            text={'My Skills & Expertise'}
+            color={colors.main.onPrimary}
+            fontType={FONT_TYPE.HEADLINE_SMALL}
+            className={style.sectionHeader}
+        />
         <div className={style.listContainer}>
             <SkillsAccordionComponent
                 headerIcon={<ReactIcon />}

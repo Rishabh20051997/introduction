@@ -49,8 +49,10 @@
 }
 
 .profileImageContainer {
-  @include flexCentreAlign
+  @include flexCentreAlign;
+  flex-direction: column;
 }
+
 
 .profilePicStyle {
   width: '100%';

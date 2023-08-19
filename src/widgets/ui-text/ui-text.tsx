@@ -9,6 +9,7 @@ const Text = ({
     color = 'white',
     textAlign ='left',
     className = '',
+    onClick,
     children
 }: ITextProps) => {
 
@@ -24,6 +25,7 @@ const Text = ({
             margin: 0
         }}
         className={className}
+        onClick={onClick}
     >
         {children || text || ''}
     </p>

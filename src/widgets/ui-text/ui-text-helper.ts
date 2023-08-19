@@ -40,10 +40,10 @@ export const getFontSize = (fontType: IFontTypeProp) => {
             return { fontWeight: 'bold', fontSize: `calc(6px + 1vmin)` }
 
         case FONT_TYPE.BODY_LARGE:
-            return { fontWeight: 'normal', fontSize: `calc(4px + 0.8vmin)` }
+            return { fontWeight: 'normal', fontSize: `calc(6px + 1vmin)` }
 
         case FONT_TYPE.BODY_MEDIUM:
-            return { fontWeight: 'normal', fontSize: `calc(4px + 0.6vmin)` }
+            return { fontWeight: 'normal', fontSize: `calc(4px + 0.8vmin)` }
 
         case FONT_TYPE.BODY_SMALL:
             return { fontWeight: 'normal', fontSize: `calc(2px + 0.6vmin)` }

@@ -5,17 +5,17 @@
 .container {
   background-color: $primary-variant-color;
   padding: 4rem 2rem;
+  box-sizing: border-box;
 }
 
 .sectionHeader {
   @include flexCentreAlign;
   flex-direction: column;
-  @include sectionHeader;
   text-transform:uppercase;
 }
 
 .listContainer {
-    padding-top: 2rem;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,7 +23,11 @@
 }
 
 .listItemContainer {
-    padding-top: 1rem;
+    padding-top: 0.6rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
 }
 
 .listItem {
@@ -47,4 +51,20 @@
     color: $on-primary-variant-color;  
     padding-left: 2rem;
 }
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.listHeaderText {
+  display: flex;
+  flex-direction: row;
+  align-items: center ;
+}
+
 

@@ -1,11 +1,11 @@
-import { NAV_LINKS_LIST, NAV_LINK_KEY } from "../../../../constant/constant"
-import AboutMeComponent from "../../../../components/about-me-component/about-me-component"
-import ContactUsComponent from "../../../../components/contact-us-component/contact-us-component"
-import EducationQualificationComponent from "../../../../components/education-qualification-component/education-qualification-component"
-import ExperienceComponent from "../../../../components/experience-component/experience-component"
-import ProjectComponent from "../../../../components/projects-component/project-component"
-import SectionComponent from "../../../../components/section-component"
-import SkillsComponent from "../../../../components/skills-component/skills-component"
+import { NAV_LINKS_LIST, NAV_LINK_KEY } from "constant/constant"
+import AboutMeComponent from "components/about-me-component/about-me-component"
+import ContactUsComponent from "components/contact-us-component/contact-us-component"
+import EducationQualificationComponent from "components/education-qualification-component"
+import ExperienceComponent from "components/experience-component/experience-component"
+import ProjectComponent from "components/projects-component/project-component"
+import SectionComponent from "components/section-component"
+import SkillsComponent from "components/skills-component/skills-component"
 
 const HOME_COMPONENT_MAP = new Map([
     [NAV_LINK_KEY.ABOUT, AboutMeComponent],
@@ -26,7 +26,6 @@ const MainContainerComponent = () => {
                 index={index}
                 >
                     <Component
-
                 />
                 </SectionComponent> 
             }

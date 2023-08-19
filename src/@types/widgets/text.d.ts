@@ -43,4 +43,6 @@ type TextAlign = import('csstype').Property.TextAlign
    
      // text to render
      children?: ReactNode
+
+     onClick?: () => void
    }
