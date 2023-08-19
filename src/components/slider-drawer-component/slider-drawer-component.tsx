@@ -12,6 +12,7 @@ const SliderDrawerComponent = () => {
     const { sliderVisible, hideSlider } = useStore()
 
     let drawerClasses = styles.sideDrawer
+    
     if (sliderVisible) {
         drawerClasses = styles.sideDrawer + ' ' + styles.open
     }

@@ -2,13 +2,17 @@
 @import "../../../../sass/mixing";
 
 .navbar {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background: $primary-color;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+  z-index: 99;
 }
 
 .navLinks {

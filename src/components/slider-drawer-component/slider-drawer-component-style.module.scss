@@ -40,7 +40,7 @@
    color: $on-primary-variant-color;
    text-transform: capitalize;
    text-decoration: none;
-   font-size: 1.2rem;
+   font-size: calc(8px + 0.6rem);
    padding: 0.5rem;
    transition: all 0.3s linear;
  
