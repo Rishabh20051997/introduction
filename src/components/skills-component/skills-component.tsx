@@ -1,66 +1,37 @@
-import { useState } from 'react'
-import { ReactIcon, JavascriptIcon, TypescriptIcon } from '../../resources/icons/social-media-icons'
+
+import { ReactIcon, JavascriptIcon, TypescriptIcon } from 'resources/icons/social-media-icons'
+import SkillsAccordionComponent from './component/skills-accordion'
 import style from './skills-component-style.module.scss'
 
-const AccordionWrapper = ({
-    headerIcon,
-    headerText,
-    listData
-}: {
-    headerIcon: JSX.Element
-    headerText: string
-    listData: string[]
-}) => {
-
-    const [isVisible, updateVisibleStatus] = useState(true)
-    return <div className={style.listItemContainer}>
-        <header onClick={() => updateVisibleStatus(!isVisible)} className={style.listItem}>
-            {headerIcon}
-            <header className={style.sectionSubHeader}>{headerText}</header>
-        </header>
-        {isVisible ? <p className={style.bulletListItem}>
-            <ul>
-                {listData.map(item => {
-                    return <li>{item}</li>
-                })}
-            </ul>
-
-        </p> : null}
-    </div>
-}
-
-const SkillsComponent = ({
-    sectionId = '',
-    index = 0
-}) => {
-    return <section  id={sectionId} className={style.container}>
+const SkillsComponent = () => {
+    return <>
         <header className={style.sectionHeader}>My Skills & Expertise</header>
         <div className={style.listContainer}>
-            <AccordionWrapper
+            <SkillsAccordionComponent
                 headerIcon={<ReactIcon />}
                 headerText='React Native'
                 listData={['Details of react native experience -. redux mobx, firebase etc with accordion']}
             />
 
-            <AccordionWrapper
+            <SkillsAccordionComponent
                 headerIcon={<ReactIcon />}
                 headerText='React'
                 listData={['Details of react experience -. redux mobx, firebase etc with accordion']}
             />
 
-            <AccordionWrapper
+            <SkillsAccordionComponent
                 headerIcon={<JavascriptIcon />}
                 headerText='Javascript'
                 listData={['Javascript experience']}
             />
 
-            <AccordionWrapper
+            <SkillsAccordionComponent
                 headerIcon={<TypescriptIcon />}
                 headerText='Typescript'
                 listData={['Javascript experience']}
             />
         </div>
-    </section>
+    </>
 
 }
 

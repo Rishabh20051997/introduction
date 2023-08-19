@@ -1,6 +1,6 @@
 import { useCallback } from "react"
-import { NAV_LINKS_LIST } from "../../constant/constant"
-import { logo } from "../../resources"
+import { NAV_LINKS_LIST } from "../../../../constant/constant"
+import { logo } from "../../../../resources"
 import styles from './nav-bar-style.module.scss'
 
 

@@ -1,6 +1,6 @@
-import FooterComponent from '../../components/footer-component/footer-component';
-import MainContainerComponent from '../../components/main-container-component/main-container-component';
-import NavBarComponent from '../../components/nav-bar-component/nav-bar-component';
+import FooterComponent from 'screens/main-screen/components/footer-component';
+import MainContainerComponent from 'screens/main-screen/components/main-container-component';
+import NavBarComponent from 'screens/main-screen/components/nav-bar-component';
 import './main-screen.scss';
 
 

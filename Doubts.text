@@ -1,3 +1,4 @@
 1. create react app -> no babel & webpack. Why ?
+2. components inside component -> is it ok  or some better ways?
 3. Best way to structure the components
 4. 2 type of file for style -> className & react style

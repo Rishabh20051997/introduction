@@ -1,11 +1,13 @@
 export const colors = {
     main: {
-        primary: '#82b340',
-        primary_variant: '#82FFEE',
-        secondary: '#222',
-        secondary_variant: '#222',
-        onPrimary: '#222',
-        onSecondary: '#FFF'
+        primary: '#282c34',
+        primaryVariant: '#222',
+        secondary: '#82b340',
+        secondaryVariant: '#82FFEE',
+        onPrimary: '#61dafb',
+        onPrimaryVariant: '#FFF',
+        onSecondary: '#FFF',
+        onSecondaryVariant: '#FFF'
     },
     accent: {
 

@@ -1,25 +1,8 @@
+import EducationItemContainer from './components/education-item-container'
 import style from './education-qualification-component-style.module.scss'
 
-
-const EducationItemContainer = ({
-       qualification = '',
-       stream = '',
-       institute = '',
-       marks = ''
-}) => {
-       return <div className={style.educationItemContainer}>
-              <p className={style.qualificationText}>{qualification}</p>
-              {stream ? <p className={style.streamText}>{stream}</p> : null}
-              <p className={style.instituteDetails}>{institute}</p>
-              <p className={style.marksInfo}>{marks}</p>
-       </div>
-}
-
-const EducationQualificationComponent = ({
-       sectionId = '',
-       index = 0
-   }) => {
-       return <section  id={sectionId} className={style.container}>
+const EducationQualificationComponent = () => {
+       return <>
 
               <header className={style.sectionHeader}>Education Qualification</header>
               <div className={style.rowContainer}>
@@ -50,7 +33,7 @@ const EducationQualificationComponent = ({
                             marks={'CGPA - 8.60 / 10.0'}
                      />
               </div>
-       </section>
+       </>
 
 }
 

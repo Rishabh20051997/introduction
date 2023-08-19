@@ -1,1 +1,7 @@
-export { }
+export * from './about-me-component'
+export * from './contact-us-component'
+export * from './education-qualification-component'
+export * from './experience-component'
+export * from './projects-component'
+export * from './section-component'
+export * from './skills-component'

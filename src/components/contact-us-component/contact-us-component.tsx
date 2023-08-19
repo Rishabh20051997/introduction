@@ -1,11 +1,8 @@
 import style from './contact-us-component-style.module.scss'
 
-const ContactUsComponent = ({
-    sectionId = '',
-    index = 0
-}) => {
+const ContactUsComponent = () => {
 
-    return <section  id={sectionId} className={style.container}>
+    return <>
         <header className={style.sectionHeader}>Get In Touch</header>
 
         <div className={style.innerContainer}>
@@ -24,7 +21,7 @@ const ContactUsComponent = ({
                 <p className={style.infoText}>396/1, Bhim Garh Kheri, Gurgaon, India - 122001</p>
             </div>
         </div>
-    </section>
+    </>
 
 }
 
