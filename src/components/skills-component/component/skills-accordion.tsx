@@ -33,7 +33,7 @@ const SkillsAccordionComponent = ({
             </div>
 
         </div>
-        {isVisible ? <p className={style.bulletListItem}>
+        {isVisible ? <div className={style.bulletListItem}>
             <ul>
                 {listData.map(item => {
                     return <li>
@@ -46,7 +46,7 @@ const SkillsAccordionComponent = ({
                 })}
             </ul>
 
-        </p> : null}
+        </div> : null}
     </div>
 }
 

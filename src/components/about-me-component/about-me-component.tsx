@@ -8,23 +8,34 @@ import style from './about-me-style.module.scss'
 
 const AboutMeComponent = () => {
     return <section className={style.container}>
-         <div className={style.profileImageContainer}>
-            <Image image={profilePic} className={style.profilePicStyle}/>
+        <div className={style.profileImageContainer}>
+            <Image image={profilePic} className={style.profilePicStyle} />
         </div>
         <div className={style.personalInfoContainer}>
-            <Text color={colors.main.onPrimary} fontType={FONT_TYPE.HEADLINE_SMALL} text={'Hi I am Rishabh Sharma'}/>
-            <Text color={colors.main.onPrimaryVariant} text={'I am a Software Engineer with experience of 4 years in React Native'} fontType={FONT_TYPE.TITLE_MEDIUM}/>
+            <Text color={colors.main.onPrimary} fontType={FONT_TYPE.HEADLINE_SMALL} text={'Hi I am Rishabh Sharma'} />
+            <Text color={colors.main.onPrimaryVariant} text={'I am a Software Engineer with experience of 4 years in React Native'} fontType={FONT_TYPE.TITLE_MEDIUM} />
             <div className={style.socialMediaContainer}>
-                <WhatsAppIcon className={style.socialMediaIcons} />
-                <LinkedInIcon className={style.socialMediaIcons} />
-                <GithubIcon className={style.socialMediaIcons} />
-                <GmailIcon className={style.socialMediaIcons} />
+                <a href='https://api.whatsapp.com/send/?phone=919711138285' target="_blank">
+                    <WhatsAppIcon className={style.socialMediaIcons} />
+                </a>
+                <a href='https://www.linkedin.com/in/rishabh-sharma-20051997' target="_blank">
+                    <LinkedInIcon className={style.socialMediaIcons} />
+                </a>
+                <a href='https://github.com/Rishabh20051997/' target="_blank">
+                    <GithubIcon className={style.socialMediaIcons} />
+                </a>
+                <a href='https://mail.google.com/mail/?view=cm&fs=1&to=kaushikrishabh2005@gmail.com' target="_blank">
+                    <GmailIcon className={style.socialMediaIcons} />
+                </a>
             </div>
-            <button className={style.downloadCvButton}>
-                <Text color={colors.main.primary} fontType={FONT_TYPE.LABEL_MEDIUM} text={'Download CV'}/>
-            </button>
+            <a 
+            href='https://drive.google.com/file/d/13MogRMwTCBI_-G2tZ3PVAgfBmX3F7yS9/view?usp=sharing'
+            target="_blank"
+            className={style.downloadCvButton}>
+                <Text color={colors.main.primary} fontType={FONT_TYPE.LABEL_MEDIUM} text={'View CV'} />
+            </a>
         </div>
-       
+
     </section>
 
 }

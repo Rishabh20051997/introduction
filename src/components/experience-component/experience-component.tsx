@@ -1,37 +1,52 @@
 
+import Text from 'widgets/ui-text'
+import { FONT_TYPE, colors } from 'themes'
 import ExperienceItemContainer from './components/experience-item-container'
 import style from './experience-component-style.module.scss'
 
+const DATA_INFO = [{
+    dateRange: 'Dec 2022 - Present',
+    experienceCount: '1 year Experience',
+    companyName: 'Learning Closet Pvt. Ltd (Exampur)',
+    position: 'Senior Software Engineer',
+    projectName: 'worked on - Exampur App',
+    technologyUsed: 'Technology Used - Typescript, React Native, Redux, MVC pattern',
+}, {
+    dateRange: 'Nov 2022 - Dec 2022',
+    experienceCount: '1 year Experience',
+    companyName: 'UpGrad Pvt. Ltd (Exampur)',
+    position: 'Senior Software Engineer',
+    projectName: 'worked on - Exampur App',
+    technologyUsed: 'Technology Used - Typescript, React Native,Redux, MVC pattern',
+}, {
+    dateRange: 'May 2019 - Oct 2022',
+    experienceCount: '1 year Experience',
+    companyName: 'Edfora Infotech Pvt. Ltd',
+    position: 'Senior Software Engineer',
+    projectName: 'worked on - Edfora student & Edfora Teacher App',
+    technologyUsed: 'Technology Used - Typescript, React Native, Mobx',
+}]
+
 const ExperienceComponent = () => {
     return <>
-        <header className={style.sectionHeader}>My Experience</header>
-
-        <ExperienceItemContainer
-            dateRange={'21 Dec 2022 - present'}
-            experienceCount={'1 year Experience'}
-            companyName={'Learning Closet Pvt. Ltd (Exampur)'}
-            position={'Senior Software Engineer'}
-            projectName={'worked on - Exampur App'}
-            technologyUsed={'Technology Used - Typescript, React Native, Redux, MVC pattern'}
+        <Text
+            text={'My Experience'}
+            color={colors.main.onPrimary}
+            fontType={FONT_TYPE.HEADLINE_SMALL}
+            className={style.sectionHeader}
         />
-
-        <ExperienceItemContainer
-            dateRange={'1 November Dec 2022 - 20 Dec 2022'}
-            experienceCount={'1 year Experience'}
-            companyName={'UpGrad Pvt. Ltd (Exampur)'}
-            position={'Senior Software Engineer'}
-            projectName={'worked on - Exampur App'}
-            technologyUsed={'Technology Used - Typescript, React Native,Redux, MVC pattern'}
-        />
-
-        <ExperienceItemContainer
-            dateRange={'21  May 2019 - 30 October 2022'}
-            experienceCount={'1 year Experience'}
-            companyName={'Edfora Infotech Pvt. Ltd'}
-            position={'Senior Software Engineer'}
-            projectName={'worked on - Edfora student & Edfora Teacher App'}
-            technologyUsed={'Technology Used - Typescript, React Native, Mobx'}
-        />
+        {DATA_INFO.map((item, index) => {
+            return <ExperienceItemContainer
+                dateRange={item.dateRange}
+                experienceCount={item.experienceCount}
+                companyName={item.companyName}
+                position={item.position}
+                projectName={item.projectName}
+                technologyUsed={item.technologyUsed}
+                index={index}
+                totalItem={DATA_INFO.length}
+            />
+        })}
     </>
 }
 

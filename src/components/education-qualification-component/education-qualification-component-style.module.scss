@@ -1,18 +1,12 @@
 @import "../../sass/var";
 @import "../../sass/mixing";
 
-
-.container {
-    display: flex;
-    flex-direction: column;
-    background-color: $primary-variant-color;
-    padding: 4rem 2rem;
-}
-
 .sectionHeader {
-    @include sectionHeader;
+    @include flexCentreAlign;
     text-transform: uppercase;
+    flex-direction: column;
     padding-bottom: 2rem;
+
 }
 
 .sectionSubHeader {
@@ -27,31 +21,26 @@
 .educationItemContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex: 1;
 }
 
-.qualificationText {
-    @include sectionSubHeader;
-    color: $on-primary-color;  
+.lineContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0rem;
 }
 
-.streamText {
-    font-size: calc(14px + 1vmin);
-    color: $on-primary-variant-color;
-    font-weight: bold;
+.line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1px;
+    background-color: $on-primary-variant-color;
+    width: 40%
 }
-
-.marksInfo {
-    font-size: calc(10px + 0.8vmin);
-    color: $on-primary-variant-color;
-}
-
-.instituteDetails {
-    font-size: calc(10px + 1vmin);
-    color: $on-primary-variant-color;
-    font-weight: bold;
-}
-
 
 
 

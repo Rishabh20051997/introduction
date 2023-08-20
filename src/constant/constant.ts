@@ -28,11 +28,13 @@ export const NAV_LINKS_LIST = [{
     key: NAV_LINK_KEY.EXPERIENCE,
     displayValue: 'Experience',
     scrollId: NAV_LINK_ID.EXPERIENCE
-}, {
-    key: NAV_LINK_KEY.PROJECTS,
-    displayValue: 'Projects',
-    scrollId: NAV_LINK_ID.PROJECTS
-}, {
+}, 
+// {
+//     key: NAV_LINK_KEY.PROJECTS,
+//     displayValue: 'Projects',
+//     scrollId: NAV_LINK_ID.PROJECTS
+// }, 
+{
     key: NAV_LINK_KEY.EDUCATION,
     displayValue: 'Education Qualification',
     scrollId: NAV_LINK_ID.EDUCATION
