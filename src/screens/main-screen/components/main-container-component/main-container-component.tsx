@@ -22,6 +22,7 @@ const MainContainerComponent = () => {
             const Component = HOME_COMPONENT_MAP.get(item?.key)
             if (Component) {
                 return <SectionComponent 
+                key={item.key}
                 id={item.scrollId}
                 index={index}
                 >

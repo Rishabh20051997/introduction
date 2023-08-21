@@ -16,9 +16,10 @@ const EducationQualificationComponent = () => {
                      className={style.sectionHeader}
               />
               {education2DData.map((educationArray, index) => {
-                     return <div className={style.rowContainer}>
+                     return <div key={index} className={style.rowContainer}>
                             {educationArray.map(item => {
                                    return <EducationItemContainer
+                                          key={item.qualification}
                                           qualification={item.qualification}
                                           stream={item.stream}
                                           institute={item.institute}

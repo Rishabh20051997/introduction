@@ -27,6 +27,7 @@ const SkillsComponent = () => {
             {skillsSet.map((item) => {
                 const Icon = ICON_MAP.get(item.language) || ReactIcon
                 return <SkillsAccordionComponent
+                key={item.language}
                 headerIcon={<Icon />}
                 headerText={item.language}
                 listData={item.skillsInfoList}

@@ -16,6 +16,7 @@ const ExperienceComponent = () => {
         />
         {experienceData.map((item, index) => {
             return <ExperienceItemContainer
+                key={item.companyName}
                 startDate={item.startDate}
                 endDate={item.endDate}
                 companyName={item.companyName}

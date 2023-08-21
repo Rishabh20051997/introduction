@@ -16,7 +16,7 @@ const SkillsAccordionComponent = ({
 }) => {
 
     const [isVisible, updateVisibleStatus] = useState(true)
-    return <div className={style.listItemContainer}>
+    return <div key={headerText} className={style.listItemContainer}>
 
         <div onClick={() => updateVisibleStatus(!isVisible)} className={style.listItem}>
             <div className={style.listHeader}>
@@ -35,8 +35,8 @@ const SkillsAccordionComponent = ({
         </div>
         {isVisible ? <div className={style.bulletListItem}>
             <ul>
-                {listData.map(item => {
-                    return <li>
+                {listData.map((item, index) => {
+                    return <li key={item + '' + index}>
                         <Text
                             text={item}
                             color={colors.main.onPrimaryVariant}

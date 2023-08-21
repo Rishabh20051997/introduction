@@ -1,4 +1,4 @@
-const logo = require('./logo192.png')
+const logo = require('./rs_logo.png')
 const profilePic = require('./profile-pic.png')
 
 export {

@@ -11,6 +11,7 @@ const FullScreenNavBar = () => {
     return <div className={styles.navLinks}>
             {NAV_LINKS_LIST.map(item => {
                 return <a
+                    key={item.key}
                     onClick={() => onNavBarClicked(item)}
                     className={styles.navLink}>
                     {item.displayValue}
