@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const SliderModalEntity = () => {
-    const [sliderVisible, updateSliderVisibility] = useState(true)
+    const [sliderVisible, updateSliderVisibility] = useState(false)
 
     const hideSlider = () => {
         updateSliderVisibility(false)
@@ -18,6 +18,6 @@ const SliderModalEntity = () => {
     }
 }
 
-const sliderEntity = SliderModalEntity()
 
-export default sliderEntity
+
+export default SliderModalEntity

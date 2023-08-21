@@ -3,8 +3,7 @@ import MainContainerComponent from 'screens/main-screen/components/main-containe
 import NavBarComponent from 'screens/main-screen/components/nav-bar-component';
 import './main-screen.scss';
 import SliderDrawerComponent from 'components/slider-drawer-component';
-import AppContextProvider from 'store/context';
-// import AppContextProvider from 'store/context-provider';
+import AppContextProvider from 'store/context-provider';
 
 
 

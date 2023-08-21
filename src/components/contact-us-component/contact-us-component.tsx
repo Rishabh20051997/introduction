@@ -1,9 +1,17 @@
 import Text from 'widgets/ui-text'
+import { useStore } from 'store/store'
 import { FONT_TYPE, colors } from 'themes'
-import style from './contact-us-component-style.module.scss'
 import ContactUsLabelComponent from './contact-us-label-component'
+import style from './contact-us-component-style.module.scss'
 
 const ContactUsComponent = () => {
+
+    const { 
+        mobile: { number, isoCode},
+        address,
+        emailId
+
+} = useStore().personalInfo
 
     return <>
         <Text
@@ -16,17 +24,17 @@ const ContactUsComponent = () => {
         <div className={style.innerContainer}>
             <ContactUsLabelComponent
                 label={'EMAIL'}
-                value='kaushikrishabh2005@gmail.com'
+                value={emailId}
             />
 
             <ContactUsLabelComponent
                 label={'PHONE'}
-                value='+91 9711138285'
+                value={'+' + isoCode + ' ' + number}
             />
 
             <ContactUsLabelComponent
                 label={'ADDRESS'}
-                value='396/1, Bhim Garh Kheri, Gurgaon, India - 122001'
+                value={address}
             />
 
         </div>

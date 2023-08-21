@@ -1,15 +1,14 @@
-import { useStore } from "store/context";
 import styles from './slider-drawer-component-style.module.scss'
 import { NAV_LINKS_LIST } from "constant/constant";
 import { useCallback } from "react";
 import Image from 'widgets/ui-image'
 import { logo } from "resources";
-// import { useStore } from "store/store";
+import { useStore } from "store/store";
 
 
 const SliderDrawerComponent = () => {
 
-    const { sliderVisible, hideSlider } = useStore()
+    const { sliderVisible, hideSlider } = useStore().slider
 
     let drawerClasses = styles.sideDrawer
     

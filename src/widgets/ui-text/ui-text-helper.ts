@@ -17,7 +17,7 @@ export const getFontSize = (fontType: IFontTypeProp) => {
             return { fontWeight: 'bolder', fontSize: `calc(10px + 2.4vmin)` }
 
         case FONT_TYPE.TITLE_LARGE:
-            return { fontWeight: 'bold', fontSize: `calc(10px + 2.2.vmin)` }
+            return { fontWeight: 'bold', fontSize: `calc(10px + 2.2vmin)` }
 
         case FONT_TYPE.TITLE_MEDIUM:
             return { fontWeight: '600', fontSize: `calc(10px + 2vmin)` }

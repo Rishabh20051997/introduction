@@ -2,6 +2,7 @@ import Text from 'widgets/ui-text'
 import { FONT_TYPE } from 'themes/fonts'
 import { colors } from 'themes/colors'
 import style from '../experience-component-style.module.scss'
+import { dateFormatTypes, experienceCalculator, formatDate } from 'utils/app-utils'
 
 
 const RenderProgressBar = ({
@@ -17,15 +18,18 @@ const RenderProgressBar = ({
 }
 
 const ExperienceItemContainer = ({
-    dateRange = '',
-    experienceCount = '',
+    startDate = '',
+    endDate = '',
     companyName = '',
-    position = '',
+    designation = '',
     projectName = '',
     technologyUsed = '',
     index = 0,
     totalItem = 0
 }) => {
+    const dateRange = formatDate(startDate, { format: dateFormatTypes.MMMYYYY }) + ' - ' + (endDate ? formatDate(endDate, { format: dateFormatTypes.MMMYYYY }) : 'Present')
+    const experienceCount = experienceCalculator(new Date(startDate), endDate? new Date(endDate): new Date())
+
     return <div className={style.experienceItemContainer}>
         <div className={style.leftContainer}>
             <div>
@@ -37,7 +41,7 @@ const ExperienceItemContainer = ({
         <div className={style.rightContainer}>
             <div className={style.cardContainer}>
                 <Text color={colors.main.onPrimary} text={companyName} fontType={FONT_TYPE.TITLE_EXTRA_LARGE} />
-                <Text color={colors.main.onPrimaryVariant} text={position} fontType={FONT_TYPE.LABEL_LARGE} />
+                <Text color={colors.main.onPrimaryVariant} text={designation} fontType={FONT_TYPE.LABEL_LARGE} />
                 <Text color={colors.main.onPrimaryVariant} text={projectName} fontType={FONT_TYPE.LABEL_SMALL} />
                 <Text color={colors.main.onPrimaryVariant} text={technologyUsed} fontType={FONT_TYPE.BODY_LARGE} />
             </div>

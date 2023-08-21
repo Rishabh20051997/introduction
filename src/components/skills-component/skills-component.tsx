@@ -1,11 +1,21 @@
-
-import { ReactIcon, JavascriptIcon, TypescriptIcon } from 'resources/icons/language-icons'
-import SkillsAccordionComponent from './component/skills-accordion'
 import Text from 'widgets/ui-text'
-import style from './skills-component-style.module.scss'
+import { useStore } from 'store/store'
 import { FONT_TYPE, colors } from 'themes'
+import SkillsAccordionComponent from './component/skills-accordion'
+import { ReactIcon, JavascriptIcon, TypescriptIcon } from 'resources/icons/language-icons'
+
+import style from './skills-component-style.module.scss'
+
+const ICON_MAP = new Map([
+    ['React Native', ReactIcon],
+    ['React', ReactIcon],
+    ['Javascript', JavascriptIcon],
+    ['Typescript', TypescriptIcon],
+
+])
 
 const SkillsComponent = () => {
+    const { skillsSet } = useStore().skillSetInfo
     return <>
         <Text
             text={'My Skills & Expertise'}
@@ -14,29 +24,14 @@ const SkillsComponent = () => {
             className={style.sectionHeader}
         />
         <div className={style.listContainer}>
-            <SkillsAccordionComponent
-                headerIcon={<ReactIcon />}
-                headerText='React Native'
-                listData={['Details of react native experience -. redux mobx, firebase etc with accordion']}
+            {skillsSet.map((item) => {
+                const Icon = ICON_MAP.get(item.language) || ReactIcon
+                return <SkillsAccordionComponent
+                headerIcon={<Icon />}
+                headerText={item.language}
+                listData={item.skillsInfoList}
             />
-
-            <SkillsAccordionComponent
-                headerIcon={<ReactIcon />}
-                headerText='React'
-                listData={['Details of react experience -. redux mobx, firebase etc with accordion']}
-            />
-
-            <SkillsAccordionComponent
-                headerIcon={<JavascriptIcon />}
-                headerText='Javascript'
-                listData={['Javascript experience']}
-            />
-
-            <SkillsAccordionComponent
-                headerIcon={<TypescriptIcon />}
-                headerText='Typescript'
-                listData={['Javascript experience']}
-            />
+            })}
         </div>
     </>
 
