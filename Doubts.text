@@ -4,3 +4,8 @@
 4. 2 type of file for style -> className & react style
 5. rem not working
 6. store issue
+
+
+Docker Step:
+1. TO BUILD -> docker build -f DockerFile.dev -t myintro .
+2. TO Run -> docker run -it --name myIntro -p 3000:3000 myintro

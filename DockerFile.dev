@@ -1,0 +1,15 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY ./package.json /app
+
+RUN yarn install
+
+copy . /app
+
+CMD ["npm", "start"]
+
+# Docker Step: -> Dev
+# 1. TO BUILD -> docker build -f DockerFile.dev -t myintro .
+# 2. TO Run -> docker run -it --name myIntro -p 3000:3000 myintro

@@ -28,9 +28,6 @@ const AboutMeComponent = () => {
                 fontType={FONT_TYPE.TITLE_MEDIUM} />
 
             <div className={style.socialMediaContainer}>
-                <AnchorLink link={whatsAppUrl}>
-                    <WhatsAppIcon className={style.socialMediaIcons} />
-                </AnchorLink>
 
                 <AnchorLink link={linkedIn.url}>
                     <LinkedInIcon className={style.socialMediaIcons} />
@@ -42,6 +39,10 @@ const AboutMeComponent = () => {
 
                 <AnchorLink link={gmailUrl}>
                     <GmailIcon className={style.socialMediaIcons} />
+                </AnchorLink>
+
+                <AnchorLink link={whatsAppUrl}>
+                    <WhatsAppIcon className={style.socialMediaIcons} />
                 </AnchorLink>
             </div>
 
