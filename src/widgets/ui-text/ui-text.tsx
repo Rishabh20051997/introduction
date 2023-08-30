@@ -9,22 +9,23 @@ const Text = ({
     color = 'white',
     textAlign ='left',
     className = '',
+    textPadding = '0.5vh',
     onClick,
-    children
+    children,
 }: ITextProps) => {
 
     const { fontWeight, fontSize } = getFontSize(fontType)
 
     return <p
+    className={className}
         style={{
             color,
             textAlign: textAlign,
             fontSize,
             fontWeight,
-            padding: '0.5rem',
+            padding: textPadding,
             margin: 0
         }}
-        className={className}
         onClick={onClick}
     >
         {children || text || ''}

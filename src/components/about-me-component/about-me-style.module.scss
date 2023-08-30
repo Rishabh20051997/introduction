@@ -31,11 +31,11 @@
 }
 
 .socialMediaContainer {
-  padding: 1rem 0rem;
+  padding: 1vh 0vw;
 }
 
 .socialMediaIcons {
-  padding-right: 1rem;
+  padding-right: 1vw;
 
   &:hover {
     opacity: 0.7;
@@ -43,8 +43,8 @@
 }
 
 .downloadCvButton {
-  padding: 0.4rem 1rem;
-  border-radius: 1rem;
+  padding: 0.4vh 1vw;
+  border-radius: 1vmax;
   background-color: white;
   text-decoration: none;
 

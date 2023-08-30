@@ -5,8 +5,7 @@
     @include flexCentreAlign;
     text-transform: uppercase;
     flex-direction: column;
-    padding-bottom: 2rem;
-
+    padding-bottom: 2vh;
 }
 
 .sectionSubHeader {
@@ -23,6 +22,7 @@
     flex-direction: column;
     align-items: center;
     flex: 1;
+    padding-top: 2vh;
 }
 
 .lineContainer {
@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2rem 0rem;
+    padding: 2vh 0vw;
 }
 
 .line {

@@ -40,6 +40,8 @@ type TextAlign = import('csstype').Property.TextAlign
    
      // Styling for text
      className?: string
+
+     textPadding?:string
    
      // text to render
      children?: ReactNode

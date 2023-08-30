@@ -26,7 +26,7 @@ const SkillSetInfoEntity = () => {
         },
         {
             language: 'Typescript',
-            skillsInfoList : ['Javascript Language with experience of over 5 years']
+            skillsInfoList : ['Typescript Language with experience of over 5 years']
         }
     ]
     return {

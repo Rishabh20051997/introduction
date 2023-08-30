@@ -9,7 +9,7 @@
 }
 
 .listContainer {
-    padding-top: 1rem;
+    padding-top: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -17,7 +17,7 @@
 }
 
 .listItemContainer {
-    padding-top: 0.6rem;
+    padding-top: 1vh;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -33,7 +33,7 @@
 .sectionSubHeader {
   font-size: calc(14px + 1vmin);
   color: $on-primary-variant-color;
-  padding-left: 1rem;
+  padding-left: 1vh;
 
   &:hover {
     text-decoration: underline;
@@ -43,7 +43,7 @@
 .bulletListItem {
     font-size: calc(10px + 1vmin);
     color: $on-primary-variant-color;  
-    padding-left: 2rem;
+    padding-left: vh;
 }
 
 .listHeader {

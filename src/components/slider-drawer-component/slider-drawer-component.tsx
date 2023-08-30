@@ -2,8 +2,10 @@ import styles from './slider-drawer-component-style.module.scss'
 import { NAV_LINKS_LIST } from "constant/constant";
 import { useCallback } from "react";
 import Image from 'widgets/ui-image'
+import Text from 'widgets/ui-text'
 import { logo } from "resources";
 import { useStore } from "store/store";
+import { FONT_TYPE } from 'themes';
 
 
 const SliderDrawerComponent = () => {
@@ -30,12 +32,14 @@ const SliderDrawerComponent = () => {
               <Image image={logo} className={styles.logoImage} />
                 <div className={styles.navLinks}>
                     {NAV_LINKS_LIST.map(item => {
-                        return <a
-                            key={item.key}
-                            onClick={() => onNavBarClicked(item)}
-                            className={styles.navLink}>
-                            {item.displayValue}
-                        </a>
+                        return <Text
+                        key={item.key}
+                        text={item.displayValue}
+                        fontType={FONT_TYPE.TITLE_MEDIUM}
+                        onClick={() => onNavBarClicked(item)}
+                        className={styles.navLink}
+                        textAlign='center'
+                        />
                     })}
                 </div>
             </div>
