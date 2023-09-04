@@ -1,7 +1,7 @@
-import FooterComponent from 'screens/main-screen/components/footer-component';
-import MainContainerComponent from 'screens/main-screen/components/main-container-component';
-import NavBarComponent from 'screens/main-screen/components/nav-bar-component';
-import './main-screen.scss';
+import FooterComponent from 'layout/main-layout/components/footer-component';
+import MainContainerComponent from 'layout/main-layout/components/main-container-component';
+import NavBarComponent from 'layout/main-layout/components/nav-bar-component';
+import './main-layout.scss';
 import SliderDrawerComponent from 'components/slider-drawer-component';
 import AppContextProvider from 'store/context-provider';
 
