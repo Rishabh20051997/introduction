@@ -1,16 +1,4 @@
-1. Where to deploy
 
 
 
-Live Class server?? -> AWS using media services
-Caching -> Redis server
-# Where do we host server?? 
-1. non-serverless eks cluster 
-2. serverless -> aws
 
-
-Docker Step:
-1. TO BUILD -> docker build -f DockerFile.dev -t myintro .
-2. TO Run -> docker run -it --name myIntro -p 3000:3000 myintro
-
-# SSR -

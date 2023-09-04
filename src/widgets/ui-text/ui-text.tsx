@@ -1,35 +1,33 @@
 import { memo } from "react";
 import { FONT_TYPE } from "themes/fonts";
-import { getFontSize } from "./ui-text-helper";
+import { getFontTextClass } from "./ui-text-helper";
+import styles from './ui-text-style.module.scss'
 
 
 const Text = ({
     text = '',
     fontType = FONT_TYPE.LABEL_MEDIUM,
-    color = 'white',
-    textAlign ='left',
+    color,
+    textAlign = 'left',
     className = '',
     textPadding = '0.5vh',
     onClick,
     children,
 }: ITextProps) => {
 
-    const { fontWeight, fontSize } = getFontSize(fontType)
+    const { class: defaultClass, tag : Tag= 'p' as any } = getFontTextClass(fontType)
 
-    return <p
-    className={className}
+    return <Tag
+        className={styles[defaultClass] + ' ' + className}
         style={{
             color,
             textAlign: textAlign,
-            fontSize,
-            fontWeight,
             padding: textPadding,
-            margin: 0
         }}
         onClick={onClick}
     >
         {children || text || ''}
-    </p>
+    </Tag>
 
 }
 

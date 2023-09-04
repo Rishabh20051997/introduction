@@ -1,24 +1,24 @@
 export const FONT_TYPE: IFontType = {
     // HEADLINE
-    HEADLINE_LARGE: 'headlineLarge', // 32 // 'Bold'
-    HEADLINE_MEDIUM : 'headlineMedium', // 28 // 'Bold'
-    HEADLINE_SMALL : 'headlineSmall', // 24 // 'Bold'
+    HEADLINE_LARGE: 'headlineLarge',
+    HEADLINE_MEDIUM : 'headlineMedium',
+    HEADLINE_SMALL : 'headlineSmall',
    
     // TITLE
-    TITLE_EXTRA_LARGE: 'titleExtraLarge',  // 20, 'Bold' 
-    TITLE_LARGE: 'titleLarge', // 18 // 'Semi-Bold'
-    TITLE_MEDIUM: 'titleMedium', // 16 // 'Semi-Bold'
-    TITLE_SMALL: 'titleSmall', // 14 // 'Semi-Bold'
+    TITLE_EXTRA_LARGE: 'titleExtraLarge',
+    TITLE_LARGE: 'titleLarge',
+    TITLE_MEDIUM: 'titleMedium',
+    TITLE_SMALL: 'titleSmall',
    
     // LABEL
-    LABEL_LARGE: 'labelLarge', // 16 // 'Regular',
-    LABEL_MEDIUM: 'labelMedium', // 14 // 'Regular'
-    LABEL_SMALL: 'labelSmall', // 12 // 'Regular'
+    LABEL_LARGE: 'labelLarge',
+    LABEL_MEDIUM: 'labelMedium',
+    LABEL_SMALL: 'labelSmall',
    
     // BODY
-    BODY_LARGE_BOLD: 'bodyLargeBold', // 14 //  'Semi-Bold'
-    BODY_LARGE: 'bodyLarge', // 14 // 'Regular'
-    BODY_MEDIUM: 'bodyMedium', //12 // 'Regular'
-    BODY_SMALL : 'bodySmall', // 10 // 'Regular'
-    BODY_EXTRA_SMALL: 'bodyExtraSmall', // 9 // 'Regular'
+    BODY_LARGE_BOLD: 'bodyLargeBold',
+    BODY_LARGE: 'bodyLarge',
+    BODY_MEDIUM: 'bodyMedium',
+    BODY_SMALL : 'bodySmall',
+    BODY_EXTRA_SMALL: 'bodyExtraSmall',
 };
