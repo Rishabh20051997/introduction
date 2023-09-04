@@ -10,9 +10,63 @@
 
 @media screen and (max-width: 768px) {
   .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socialMediaContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .actionButtonContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2vh;
+  }
+
+  .downloadCvButton {
+    padding: 0.4vh 1vw;
+    margin-top: 0vh;
+    border-radius: 1vmax;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+.actionButtonContainer {
   display: flex;
   flex-direction: column;
-  }
+  align-items: flex-start;
+  justify-content:space-between;
+}
+
+.downloadCvButton {
+  padding: 0.4vh 1vw;
+  margin-top: 3vh;
+  border-radius: 1vmax;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+.socialMediaContainer {
+  padding: 1vh 0vw;
+}
 }
 
 .personalInfoContainer {
@@ -30,9 +84,7 @@
   @include sectionSubHeader
 }
 
-.socialMediaContainer {
-  padding: 1vh 0vw;
-}
+
 
 .socialMediaIcons {
   padding-right: 1vw;
@@ -42,13 +94,7 @@
   }
 }
 
-.downloadCvButton {
-  padding: 0.4vh 1vw;
-  border-radius: 1vmax;
-  background-color: white;
-  text-decoration: none;
 
-}
 
 .profileImageContainer {
   @include flexCentreAlign;

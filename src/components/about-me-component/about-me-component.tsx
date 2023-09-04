@@ -26,29 +26,31 @@ const AboutMeComponent = () => {
                 color={colors.main.onPrimaryVariant}
                 text={`I am a ${career.careerDesignation} with experience of ${totalExperience} in ${career.language}`}
                 fontType={FONT_TYPE.TITLE_MEDIUM} />
+            <div className={style.actionButtonContainer}>
+                <div className={style.socialMediaContainer}>
 
-            <div className={style.socialMediaContainer}>
+                    <AnchorLink link={linkedIn.url}>
+                        <LinkedInIcon className={style.socialMediaIcons} />
+                    </AnchorLink>
 
-                <AnchorLink link={linkedIn.url}>
-                    <LinkedInIcon className={style.socialMediaIcons} />
+                    <AnchorLink link={githubUrl.url}>
+                        <GithubIcon className={style.socialMediaIcons} />
+                    </AnchorLink>
+
+                    <AnchorLink link={gmailUrl}>
+                        <GmailIcon className={style.socialMediaIcons} />
+                    </AnchorLink>
+
+                    <AnchorLink link={whatsAppUrl}>
+                        <WhatsAppIcon className={style.socialMediaIcons} />
+                    </AnchorLink>
+                </div>
+
+                <AnchorLink link={resumeUrl} className={style.downloadCvButton}>
+                    <Text color={colors.main.primary} fontType={FONT_TYPE.LABEL_MEDIUM} text={'View CV'} />
                 </AnchorLink>
 
-                <AnchorLink link={githubUrl.url}>
-                    <GithubIcon className={style.socialMediaIcons} />
-                </AnchorLink>
-
-                <AnchorLink link={gmailUrl}>
-                    <GmailIcon className={style.socialMediaIcons} />
-                </AnchorLink>
-
-                <AnchorLink link={whatsAppUrl}>
-                    <WhatsAppIcon className={style.socialMediaIcons} />
-                </AnchorLink>
             </div>
-
-            <AnchorLink link={resumeUrl} className={style.downloadCvButton}>
-                <Text color={colors.main.primary} fontType={FONT_TYPE.LABEL_MEDIUM} text={'View CV'} />
-            </AnchorLink>
         </div>
 
     </section>
